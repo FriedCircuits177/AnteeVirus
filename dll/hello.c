@@ -5,7 +5,7 @@ int main(void){
     HINSTANCE hDll;
 
     //Load a DLL
-    hDll = LoadLibrary(TEXT("ippsec.dll"));
+    hDll = LoadLibrary(TEXT("dll.dll"));
 
     //if DLL was loaded
     if (hDll != NULL){
