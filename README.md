@@ -1,4 +1,4 @@
-a cool virus
+a cool ANTI VIRUS
 
 Features:
 a blank main.py
