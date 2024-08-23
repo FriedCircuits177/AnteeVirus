@@ -27,7 +27,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
 		sysdll = LoadLibrary(tzPath);
 		TEMPLATE_GETPROCADDR
 		/***Do what you want here,for example:(If U want to do more thing, U'd better load your custom DLL here)***/
-		MessageBoxA(NULL,"You have been hijacked!",NULL,NULL);
+		MessageBoxA(NULL,"haha you're komputer hakked",NULL,NULL);
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
     case DLL_PROCESS_DETACH:
